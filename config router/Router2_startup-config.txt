@@ -58,10 +58,11 @@ interface FastEthernet4/0
  duplex auto
  speed auto
 !
+router rip
+ version 2
+ network 192.168.2.0
+!
 ip classless
-ip route 0.0.0.0 0.0.0.0 192.168.24.2 10
-ip route 192.168.1.0 255.255.255.0 192.168.12.1 10
-ip route 192.168.3.0 255.255.255.0 192.168.23.2 10
 !
 ip flow-export version 9
 !
