@@ -59,9 +59,14 @@ interface FastEthernet4/0
  speed auto
  shutdown
 !
+router eigrp 1
+ network 192.168.3.0
+ network 192.168.23.0
+ network 192.168.34.0
+ no auto-summary
+!
 router rip
  version 2
- network 192.168.3.0
 !
 ip classless
 !

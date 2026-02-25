@@ -58,9 +58,15 @@ interface FastEthernet4/0
  duplex auto
  speed auto
 !
+router eigrp 1
+ network 192.168.2.0
+ network 192.168.23.0
+ network 192.168.12.0
+ network 192.168.24.0
+ no auto-summary
+!
 router rip
  version 2
- network 192.168.2.0
 !
 ip classless
 !
